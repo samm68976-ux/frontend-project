@@ -1,0 +1,476 @@
+/* style Header  */
+/* نوع الخط */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700& display=swap');
+/* علامة ال*بدل ع selectall */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*  التنسيق دا للbodyفقط */
+body{
+    font-family:'Quicksand',sans-serif ;
+}
+/* تنسيقاات الul */
+ul{
+    list-style: none;
+}
+/* عشان اشيل كل الخطوط اللي تحت اللينك */
+a{
+    text-decoration: none;
+}
+/* containrt صفحة الabout */
+.container{
+    max-width: 1100px;
+    margin:auto ;
+}
+/* Utility classesيعني بستخدمها اكتر م مره */
+.primary-text {
+    color: #e4b95b;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+}
+ .btn-primary{
+    color: #fff;
+    border: 1px solid #fff;
+ }
+    .btn-primary:hover, .btn-secondary:hover {    /*  عشان لما احط الماوس ع الbtnيتغير لونهاا للاصفر  */
+        background: #e4b95b;
+ }
+ /* لينك ف الabout */
+ .btn-secondary{
+    color:#FFF;
+    background: #383848;
+    margin-top: 2rem;
+
+
+ }
+/* Header start */
+header{
+    height: 100vh; /* ارتفاع الهيدر ارتفاع الشاشة بالكامل */
+
+    background: 
+        url('./img/home_bg.jpeg')   /* مكان الصورة */
+        center center               /* توسيط الصورة أفقياً وعمودياً */
+        / cover                     /* خليه يملى كل المساحة */
+        no-repeat;                  /* متتكررش */
+       position: relative;
+}
+
+  /* عشان اخلي المحتوي جنب الصوره */
+#navbar{
+    display: flex;
+    /* عشان اخل المحتوي ع اليمين  */
+    justify-content: space-between;
+    /* عشان اخلي المحتوي ف النص  */
+    align-items: center;
+    
+}
+/*  تنسيقاات صورة اللوجو*/
+#navbar img{
+    width: 80px;
+    margin-left: 100px;
+  
+}
+/* عشان اخلي المحتوي جنب بعضه ع سطر واحد */
+#navbar ul{
+display: flex;
+margin-right: 100px;
+}
+#navbar ul li a{
+    padding: 15px 20px;
+    color:#fff;
+    font-weight: 600;
+}
+/* عشان يتغير لون المحتوي لماا اقف عليه بالماوس */
+#navbar ul li a:hover{
+    border-bottom: 2px solid #e4b95e;
+}
+header .content {
+    display: flex;
+    flex-direction: column;         /*عشان اخلي الcontentتحت بعضه */
+    justify-content: center;
+    align-items: center;
+     height: 75%; /* عشان اخلي الcontent ف نص الصفحه  */
+}
+header .content h1{
+    font-size: 40px;
+    color: #fff;
+}
+header .content p{
+    margin: 20px 0px;
+     color: #fff;
+}
+/* عشان اخفف من شفافية الصوره اللي ف الخلفيه */
+header::before{
+    content:"";
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0,0,0.6);
+}
+/* عشان اخلي كل المحتوي اللي علي الصوره واضح  */
+header *{
+    z-index: 10;
+
+}
+/* Header end */
+/* About start */
+#about {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+#about .title,
+#offers .title,
+#menue .title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#about h2,
+#offers h2,
+#menue h2,
+#galary h2 {
+    font-size: 40px;
+    color: #383848;
+    margin-bottom: 20px;
+}
+#about h2,
+#menue h2 {
+    color: #383848;
+}
+#about .title p,
+#menue .title p {
+    font-size: 14px;
+    color: #9a9a9a;
+    font-weight: 600;
+}
+
+#about .about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .about-content img {
+    width: 450px;
+}
+
+#about .about-content p {
+    color: #9a9a9a;
+    margin-right: 7rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+cc {
+    max-width: 450px;
+}
+#about .about-content a {
+    margin-top: 2rem;
+}
+/* About end */
+/* offer start */
+#offers {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    background: url('./img/offer-background.jpg') center center/cover fixed;
+}
+#offers h2 {
+    color: #e4b95b;
+}
+#offers .title p {
+    color: #FFF;
+    font-weight: 500;
+}
+#offers .offers-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+}
+#offers .offers-items img {
+    width: 200px;
+}
+#offers .offers-items h3 {
+    font-size: 25px;
+    margin: 15px 0;
+
+}
+#offers .offers-items p {
+    font-size: 14px;
+    padding: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+#offers .offers-items span {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+/* offer end */
+/* MENUE START */
+#menue {
+    background: #f4f4f4;
+    padding: 5rem 0;
+}
+#menue .menue-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menue .menue-items .menue-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+#menue .menue-items .menue-item img {
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#menue .menue-items .menue-item h3 {
+    color: #383848;
+    border-bottom: 1px dashed #c2bdbd;
+    padding-bottom:10px ;
+    margin-bottom: 10px;
+    position: relative;
+}
+#menue .menue-items .menue-item span {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+#menue .btn {
+    display: block;
+    margin: 20px auto 0 ;
+    cursor: pointer;
+    background: #e4b95b;
+    color: #FFF;
+}
+#menue .btn:hover {
+    background: #383848;
+}
+/* MENUE END */
+/* Day time START   */
+#daytime {
+    background: url('./img/daytime_bg.jpeg') center center/cover fixed no-repeat;
+    color: #FFF;
+    text-align: center;
+}
+#daytime .daytime-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 40vh;
+
+}
+#daytime .daytime-items h3 {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+#daytime .daytime-items p {
+    font-weight: 500;
+}
+/* Day time END   */
+/*  galary start */
+#galary {
+    background: url('./img/offer-background.jpg') center center/cover fixed no-repeat;
+    padding: 8rem  6rem;
+}
+#galary h2 {
+    color: #fff;
+    text-align: center;
+}
+#galary .img-galary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#galary .img-galary img {
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 20px;
+    opacity: 0.8;
+}
+#galary .img-galary img:hover {
+     opacity: 1;
+}
+/*  galary END */
+/* contact start */
+#contact {
+    padding: 5rem 0;
+    background: #f4f4f4;
+}
+#contact .container {
+    max-width: 900px;
+}
+#contact .contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact .contact-content .contact-info {
+    width: 50%;
+}
+#contact .contact-content .contact-info div {
+    margin: 30px 0;
+    line-height: 1.7;
+}
+#contact .contact-content .contact-info h3 {
+    font-size: 28px;
+    color: #383848;
+    margin-bottom: 10px;
+}
+#contact .contact-content .contact-info p {
+    color: #9a9a9a;
+}
+#contact .contact-content .contact-info i {
+    color: #e4b95b;
+    margin-right: 5px;
+}
+#contact .contact-content .contact-info a i {
+    color: #fff;
+    background-color: #383848;
+    padding: 15px;
+    border-radius: 50%;
+    font: 20px;
+}
+#contact .contact-content .contact-info a i:hover {
+    background: #e4b95b;
+    color: #383848;
+}
+form {
+    width: 50%;
+}
+form input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: none;
+    background-color: #e3e2dd;
+}
+#contact .btn {
+    background: #e4b95b;
+    color: #fff;
+    cursor: pointer;
+}
+#contact .btn:hover {
+    background-color: #383848;
+}
+/* contact end */
+/* footer start */
+#footer {
+    background: #383848;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+#footer a {
+    color: #fff;
+}
+/* footer end */
+/* responsiveness */
+/* medium screen + tablet */
+@media(max-width: 1000px){
+    #navbar img {
+        margin-left: 20px;    
+    }
+    #navbar ul {
+        margin-right: 20px;
+    }
+    #navbar ul li a {
+        padding: 10px;
+    }
+    header .content h1 {
+        font-size: 28px;
+    }
+    #about {
+        height: auto;
+        padding: 4rem 3rem;    
+    }
+    #about .about-content p {
+        margin-right: 2rem;
+    }
+    #about img {
+        width: 250px;
+    }
+    #offers .offers-items img{
+        width: 150px;
+    }
+    #offers .offers-items h3 {
+        font-size: 18px;
+    }
+    #menue .menue-items {
+        display: block;
+    }
+    #contact .contact-content {
+        flex-direction: column;
+    }
+
+    /* mobile Devices */
+    @media(max-width: 600px){
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar img {
+        margin-bottom: 20px;
+    }
+    header .content h1 {
+        font-size: 18px;
+    }
+    header .content p {
+        font-size: 14px;
+    }
+    #about .about-content {
+        flex-direction: column;
+    }
+    #about .about-content a {
+        margin: 2rem 0;
+    }
+    #about img {
+        margin: auto;
+    }
+    #offers {
+        height: auto;
+        padding: 30px 10px;
+    }
+    #offers .offers-items {
+        flex-direction: column;
+    }
+    #menue .menue-items .menue-item {
+        margin: 20px 10px;
+    }
+    #daytime .daytime-items {
+        display: block;
+        height: auto;
+        padding: 30px 0;
+    }
+    #daytime .daytime-items .daytime-item {
+        margin-top: 20p;   
+    }
+    #contact .contact-content .contact-info,
+    form {
+        width: 80%;
+    }
+}
+}
